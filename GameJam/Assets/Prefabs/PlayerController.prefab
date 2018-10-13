@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50910098190866364}
   - component: {fileID: 114775333122842124}
   - component: {fileID: 114970703999993302}
+  - component: {fileID: 114485667469601026}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Player
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127160689141852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17, y: -9, z: 0}
+  m_LocalPosition: {x: -17.899864, y: -9.288353, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -89,6 +90,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.4, y: 25.4}
   m_EdgeRadius: 0
+--- !u!114 &114485667469601026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1127160689141852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e7db040346f05448dbc1a51846ebf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114775333122842124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,12 +112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fe53ae722d28b4f806209319f89e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEngineForce: 10000
-  maxReverseEngineForce: 4000
+  maxEngineForce: 5000
+  maxReverseEngineForce: 400
   maxSteeringTorque: 800
-  reversePower: 0.2
+  reversePower: 0.4
   acceleration: 2
   deceleation: 1
+  maxSpeed: 15
 --- !u!114 &114970703999993302
 MonoBehaviour:
   m_ObjectHideFlags: 1
