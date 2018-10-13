@@ -5,6 +5,8 @@ using UnityEngine;
 public class LapManager : MonoBehaviour
 {
 
+
+
     public float currentLapTime
     {
         get
@@ -26,10 +28,53 @@ public class LapManager : MonoBehaviour
     public int lapsNeeded = 3;
     public float levelTimeRequirement = 60f;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private Collider2D collision;
+    public LayerMask playerLayer;
+    private Transform m_transform;
+    private BoxCollider2D hitbox;
+    public Transform upperLeft;
+    public Transform bottomRight;
+
+    private void Start()
     {
+        m_transform = this.gameObject.GetComponent<Transform>();
+        hitbox = this.gameObject.GetComponent<BoxCollider2D>();
+
+    }
+
+    private void Update()
+    {
+        CheckForCollision();
+    }
+    private void CheckForCollision()
+    {
+
+        // collision = Physics2D.OverlapArea(upperLeft.position, bottomRight.position, playerLayer);
+
+        // if (collision != null)
+        // {
+        //     Debug.Log(collision.name);
+        //     OnCollision(collision);
+        // }
+    }
+
+    private void OnCollision(Collider2D other)
+    {
+        Debug.Log("collided");
         if (other.CompareTag("Player") == true)
         {
+            Vector3 _position = other.gameObject.GetComponent<Transform>().position;
+     
+            if (m_transform.position.y < _position.y)
+            {
+                Debug.Log("von oben");
+
+                lapCounter -= 1;
+                if (lapCounter < 0)
+                    lapCounter = 0;
+                return;
+            }
+
 
             if (m_isLapStated == true)
             {
@@ -52,11 +97,18 @@ public class LapManager : MonoBehaviour
                 if (bestLapTime < levelTimeRequirement)
                 {
                     Debug.Log("Hier muss was passieren. EndScreen oder Level wechseln wenn die bedingung geschafft wurde");
-                } else {
-					Debug.Log("Nicht geschafft du Kacklappen");
-				}
+                }
+                else
+                {
+                    Debug.Log("Nicht geschafft du Kacklappen");
+                }
             }
 
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        OnCollision(other);
     }
 }

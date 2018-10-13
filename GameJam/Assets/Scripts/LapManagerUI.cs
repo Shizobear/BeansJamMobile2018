@@ -20,6 +20,7 @@ public class LapManagerUI : MonoBehaviour {
 	}
 	
 	void UpdateLapTimeText() {
+		
 		lapTimeText.text = "Lap: " + m_lapManager.lapCounter + "/" + m_lapManager.lapsNeeded + "\n"
 			+ "Current: " + SecondsToTime(m_lapManager.currentLapTime) + "\n" 
 			+ "Last: " + SecondsToTime(m_lapManager.lastLapTime) + "\n" 
