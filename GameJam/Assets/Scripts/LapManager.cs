@@ -16,10 +16,6 @@ public class LapManager : MonoBehaviour
 
             return Time.realtimeSinceStartup - m_currentLapStartTime;
         }
-		set {
-			currentLapTime = value;
-		}
-		
     }
     public float lastLapTime { get; private set; }
     public float bestLapTime { get; private set; }
