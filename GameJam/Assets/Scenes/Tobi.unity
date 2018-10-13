@@ -262,6 +262,20 @@ Prefab:
       propertyPath: lapTimeText
       value: 
       objectReference: {fileID: 1206378254}
+    - target: {fileID: 1869115323541646, guid: 09c39c0124a7f2147a0bd0fd365ca93c, type: 2}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 60583813517902344, guid: 09c39c0124a7f2147a0bd0fd365ca93c,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 60131914437234764, guid: 09c39c0124a7f2147a0bd0fd365ca93c,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09c39c0124a7f2147a0bd0fd365ca93c, type: 2}
   m_IsPrefabAsset: 0
@@ -307,6 +321,11 @@ Prefab:
     - target: {fileID: 1127160689141852, guid: b98bb29df5731da4fb3df9f7c9854af7, type: 2}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114775333122842124, guid: b98bb29df5731da4fb3df9f7c9854af7,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b98bb29df5731da4fb3df9f7c9854af7, type: 2}

@@ -12,6 +12,7 @@ TagManager:
   - LapManager
   - Clown
   - Oil
+  - Environment
   layers:
   - Default
   - TransparentFX
