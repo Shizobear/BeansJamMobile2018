@@ -118,7 +118,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
     type: 2}
   m_PrefabInternal: {fileID: 1949056352}
---- !u!1001 &446218028
+--- !u!1001 &1076610144
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -127,11 +127,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4016476252823392, guid: b98bb29df5731da4fb3df9f7c9854af7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -17
+      value: -17.899864
       objectReference: {fileID: 0}
     - target: {fileID: 4016476252823392, guid: b98bb29df5731da4fb3df9f7c9854af7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -9
+      value: -9.288353
       objectReference: {fileID: 0}
     - target: {fileID: 4016476252823392, guid: b98bb29df5731da4fb3df9f7c9854af7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -156,10 +156,6 @@ Prefab:
     - target: {fileID: 4016476252823392, guid: b98bb29df5731da4fb3df9f7c9854af7, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1127160689141852, guid: b98bb29df5731da4fb3df9f7c9854af7, type: 2}
-      propertyPath: m_Name
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b98bb29df5731da4fb3df9f7c9854af7, type: 2}
