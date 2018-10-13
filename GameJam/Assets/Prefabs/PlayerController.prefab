@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxEngineForce: 5000
-  maxReverseEngineForce: 400
+  maxReverseEngineForce: 1000
   maxSteeringTorque: 800
   reversePower: 0.4
   acceleration: 2
