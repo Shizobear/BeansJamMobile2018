@@ -11,7 +11,7 @@ public class LapManagerUI : MonoBehaviour {
 	public Text lapTimeText;
 	void Awake () {
 		m_lapManager = GetComponent<LapManager>();
-		//lapTimeText = GameObject.FindGameObjectWithTag("Canvas").GetComponentInChildren<Text>();
+		lapTimeText = GameObject.FindGameObjectWithTag("Canvas").GetComponentInChildren<Text>();
 	}
 	
 	// Update is called once per frame
@@ -20,7 +20,8 @@ public class LapManagerUI : MonoBehaviour {
 	}
 	
 	void UpdateLapTimeText() {
-		lapTimeText.text = "Current: " + SecondsToTime(m_lapManager.currentLapTime) + "\n" 
+		lapTimeText.text = "Lap: " + m_lapManager.lapCounter + "/" + m_lapManager.lapsNeeded + "\n"
+			+ "Current: " + SecondsToTime(m_lapManager.currentLapTime) + "\n" 
 			+ "Last: " + SecondsToTime(m_lapManager.lastLapTime) + "\n" 
 			+ "Best: " + SecondsToTime(m_lapManager.bestLapTime);
 	}

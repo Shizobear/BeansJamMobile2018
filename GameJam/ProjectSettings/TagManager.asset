@@ -9,6 +9,8 @@ TagManager:
   - Obstacle
   - Track
   - Canvas
+  - LapManager
+  - Clown
   layers:
   - Default
   - TransparentFX
