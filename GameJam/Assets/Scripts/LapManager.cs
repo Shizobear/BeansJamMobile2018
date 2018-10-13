@@ -60,11 +60,10 @@ public class LapManager : MonoBehaviour
 
     private void OnCollision(Collider2D other)
     {
-        Debug.Log("collided");
         if (other.CompareTag("Player") == true)
         {
             Vector3 _position = other.gameObject.GetComponent<Transform>().position;
-     
+
             if (m_transform.position.y < _position.y)
             {
                 Debug.Log("von oben");
@@ -110,5 +109,10 @@ public class LapManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         OnCollision(other);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+     
     }
 }
