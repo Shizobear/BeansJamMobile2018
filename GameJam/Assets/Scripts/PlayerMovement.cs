@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _acceleration = deceleation;
         }
-
+    
         m_engineForce = Mathf.MoveTowards(m_engineForce, m_targetEngineForce * maxEngineForce, _acceleration * Time.deltaTime);
     }
 
@@ -93,6 +93,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCollideWithObstacle()
     {
+        m_engineForce = 0f;
+    }
+
+    public void OnCollideWithOil () {
         m_engineForce = 0f;
     }
 }
