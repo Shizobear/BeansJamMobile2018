@@ -14,7 +14,7 @@ public class Balloon : MonoBehaviour
     {
         if (counter < counterMax && direction == false)
         {
-            transform.position = transform.position + new Vector3(shakeSpeed * Time.deltaTime, 0f);
+            transform.position = transform.position + new Vector3(1 * shakeSpeed * Time.deltaTime, 0f);
             counter++;
         }
         else if(direction == false)
@@ -24,7 +24,7 @@ public class Balloon : MonoBehaviour
 
         if (direction == true && counter > 0)
         {
-            transform.position = transform.position + new Vector3(-shakeSpeed * Time.deltaTime, 0f);
+            transform.position = transform.position + new Vector3(1 * -shakeSpeed * Time.deltaTime, 0f);
             counter--;
         } else if(counter == 0) {
 			direction = false;
