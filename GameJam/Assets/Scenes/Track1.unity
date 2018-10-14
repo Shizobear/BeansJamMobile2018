@@ -373,6 +373,11 @@ Prefab:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 114031401861513916, guid: d522c9ad3ee7d7d46804f5f71a43d551,
+        type: 2}
+      propertyPath: smoothSpeed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2066ef3e34838224d886f796aeee0d93, type: 2}
   m_IsPrefabAsset: 0
