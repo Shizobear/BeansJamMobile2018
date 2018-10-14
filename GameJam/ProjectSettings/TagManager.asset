@@ -56,3 +56,9 @@ TagManager:
   - name: Hindernis
     uniqueID: 705025409
     locked: 0
+  - name: Player
+    uniqueID: 1465102265
+    locked: 0
+  - name: RiesenradBaum
+    uniqueID: 3011001291
+    locked: 0
