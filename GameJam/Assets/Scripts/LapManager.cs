@@ -31,15 +31,12 @@ public class LapManager : MonoBehaviour
     private Collider2D collision;
     public LayerMask playerLayer;
     private Transform m_transform;
-    private BoxCollider2D hitbox;
     public Transform upperLeft;
     public Transform bottomRight;
 
     private void Start()
     {
         m_transform = this.gameObject.GetComponent<Transform>();
-        hitbox = this.gameObject.GetComponent<BoxCollider2D>();
-
     }
 
     private void Update()

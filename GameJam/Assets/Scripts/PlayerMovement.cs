@@ -1,5 +1,4 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private float m_steeringDirection = 0f;
     public float maxSpeed = 15f;
 
+
     void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -31,15 +31,8 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
 
-
-
         ApplyEngineForce();
         ApplySteeringForce();
-
-        if (playerRigidbody.velocity.magnitude > maxSpeed)
-        {
-            playerRigidbody.velocity = playerRigidbody.velocity.normalized * maxSpeed;
-        }
 
         if (m_targetEngineForce < 0f && transform.InverseTransformDirection(playerRigidbody.velocity).y > 0)
         {
