@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     private float m_steeringDirection = 0f;
     public float maxSpeed = 15f;
 
+    private Vector2 currentForce;
+
 
     void Awake()
     {
@@ -30,27 +32,31 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-
         ApplyEngineForce();
         ApplySteeringForce();
+
+
 
         if (m_targetEngineForce < 0f && transform.InverseTransformDirection(playerRigidbody.velocity).y > 0)
         {
             playerRigidbody.velocity = playerRigidbody.velocity * reversePower;
         }
-        else if (m_targetEngineForce > 0f && transform.InverseTransformDirection(playerRigidbody.velocity).y < 0)
+        if (m_targetEngineForce > 0f && transform.InverseTransformDirection(playerRigidbody.velocity).y < 0)
         {
             playerRigidbody.velocity = Vector2.zero;
         }
+        // else if (playerRigidbody.velocity.magnitude > maxSpeed)
+        // {
+        //     playerRigidbody.velocity = playerRigidbody.velocity.normalized * maxSpeed;
+        // }
 
-        if (playerRigidbody.velocity.magnitude > maxSpeed)
-        {
-            float exceededVel = playerRigidbody.velocity.magnitude - maxSpeed;
-            Vector2 counterVector = -(new Vector2(playerRigidbody.velocity.x, playerRigidbody.velocity.y).normalized) * exceededVel;
-            playerRigidbody.velocity += counterVector;
-        }
 
-        Debug.Log("Geschwindigkeit: " + playerRigidbody.velocity.magnitude);
+    }
+
+    private void LateUpdate()
+    {
+
+
     }
 
     void UpdateEngineForce()
@@ -74,14 +80,17 @@ public class PlayerMovement : MonoBehaviour
             maximumEngineForce = maxReverseEngineForce;
         }
 
+        if (playerRigidbody.velocity.magnitude > maxSpeed && m_engineForce > 0)
+            return;
+        playerRigidbody.AddForce((transform.up).normalized * m_engineForce * maximumEngineForce, ForceMode2D.Force);
 
-        playerRigidbody.AddForce(transform.up * m_engineForce * maximumEngineForce, ForceMode2D.Force);
 
     }
 
     void ApplySteeringForce()
     {
         playerRigidbody.AddTorque(m_steeringDirection * maxSteeringTorque, ForceMode2D.Force);
+        // this.transform.Rotate(Vector3.forward*m_steeringDirection*maxSteeringTorque);
     }
 
     public void SetSteeringDirection(float _steeringDirection)
