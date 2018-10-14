@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 61214495195319368}
   - component: {fileID: 50910098190866364}
   - component: {fileID: 114775333122842124}
-  - component: {fileID: 114970703999993302}
   - component: {fileID: 114485667469601026}
+  - component: {fileID: 114482153764512458}
   m_Layer: 10
   m_Name: PlayerController
   m_TagString: Player
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127160689141852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.28, y: -6.1, z: 0}
+  m_LocalPosition: {x: -19.84, y: -1.85, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,6 +90,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.4, y: 25.4}
   m_EdgeRadius: 0
+--- !u!114 &114482153764512458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1127160689141852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f90890fc0bb844a9b2753074ec5278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114485667469601026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -119,17 +130,6 @@ MonoBehaviour:
   acceleration: 2
   deceleation: 1
   maxSpeed: 15
---- !u!114 &114970703999993302
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1127160689141852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c1740038da3d0f418f55f4f8d864a45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212453114680616546
 SpriteRenderer:
   m_ObjectHideFlags: 1

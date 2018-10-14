@@ -186,7 +186,7 @@ Prefab:
         type: 2}
       propertyPath: upperLeft
       value: 
-      objectReference: {fileID: 1082819948}
+      objectReference: {fileID: 0}
     - target: {fileID: 114051633492801604, guid: 8cf5f13b1a05ed740a76c79e0cdf0c94,
         type: 2}
       propertyPath: bottomRight
@@ -196,7 +196,7 @@ Prefab:
         type: 2}
       propertyPath: win
       value: 
-      objectReference: {fileID: 1082819950}
+      objectReference: {fileID: 0}
     - target: {fileID: 114652928816946584, guid: 8cf5f13b1a05ed740a76c79e0cdf0c94,
         type: 2}
       propertyPath: levelInfo
@@ -205,17 +205,68 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cf5f13b1a05ed740a76c79e0cdf0c94, type: 2}
   m_IsPrefabAsset: 0
---- !u!224 &1082819948 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 224020950991018346, guid: da45da9eabf3fd04ab79b29a1f58b991,
-    type: 2}
-  m_PrefabInternal: {fileID: 1560674583}
---- !u!114 &1082819950 stripped
+--- !u!1 &1047811429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1047811432}
+  - component: {fileID: 1047811431}
+  - component: {fileID: 1047811430}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1047811430
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114590252008023288, guid: da45da9eabf3fd04ab79b29a1f58b991,
-    type: 2}
-  m_PrefabInternal: {fileID: 1560674583}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1047811429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1047811431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1047811429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1047811432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1047811429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1225212357 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224802270335911330, guid: da45da9eabf3fd04ab79b29a1f58b991,
