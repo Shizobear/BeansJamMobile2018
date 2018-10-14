@@ -59,17 +59,17 @@ public class LapManager : MonoBehaviour
     {
         if (other.CompareTag("Player") == true)
         {
-            Vector3 _position = other.gameObject.GetComponent<Transform>().position;
+            // Vector3 _position = other.gameObject.GetComponent<Transform>().position;
 
-            if (m_transform.position.y < _position.y)
-            {
-                Debug.Log("von oben");
+            // if (m_transform.position.y < _position.y)
+            // {
+            //     Debug.Log("von oben");
 
-                lapCounter -= 1;
-                if (lapCounter < 0)
-                    lapCounter = 0;
-                return;
-            }
+            //     lapCounter -= 1;
+            //     if (lapCounter < 0)
+            //         lapCounter = 0;
+            //     return;
+            // }
 
 
             if (m_isLapStated == true)
