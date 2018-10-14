@@ -50,9 +50,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: boden
+    uniqueID: 369331501
+    locked: 0
   - name: Strecke
     uniqueID: 4183933673
     locked: 0
   - name: Hindernis
     uniqueID: 705025409
+    locked: 0
+  - name: Player
+    uniqueID: 1465102265
+    locked: 0
+  - name: RiesenradBaum
+    uniqueID: 3011001291
     locked: 0
