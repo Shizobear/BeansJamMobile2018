@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 public class LevelSelector : MonoBehaviour {
 
 	public Button[] levelButtons;
-	public float levelReached = 0f;
 
 	void Start ()
 	{
 		int levelReached = PlayerPrefs.GetInt("levelReached", 1);
+		
+		Debug.Log(levelReached);
 
 		for (int i = 0; i < levelButtons.Length; i++)
 		{

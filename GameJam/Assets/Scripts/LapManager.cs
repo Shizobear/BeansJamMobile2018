@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LapManager : MonoBehaviour
 {
@@ -93,10 +94,15 @@ public class LapManager : MonoBehaviour
                 if (bestLapTime < levelTimeRequirement)
                 {
                     Debug.Log("Hier muss was passieren. EndScreen oder Level wechseln wenn die bedingung geschafft wurde");
+                    PlayerPrefs.SetInt("levelReached", 2);
+                    SceneManager.LoadScene("LevelSelect");
+                    
+                    
                 }
                 else
                 {
                     Debug.Log("Nicht geschafft du Kacklappen");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 }
             }
 
@@ -108,8 +114,5 @@ public class LapManager : MonoBehaviour
         OnCollision(other);
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-     
-    }
+
 }

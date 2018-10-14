@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
+	private void Start()
+	{
+		PlayerPrefs.DeleteAll();
+	}
 	public void PlayGame() {
 		SceneManager.LoadScene("LevelSelect");
 
