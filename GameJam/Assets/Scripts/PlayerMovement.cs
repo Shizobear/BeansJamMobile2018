@@ -40,7 +40,14 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (m_targetEngineForce > 0f && transform.InverseTransformDirection(playerRigidbody.velocity).y < 0)
         {
-			playerRigidbody.velocity = Vector2.zero;
+            playerRigidbody.velocity = Vector2.zero;
+        }
+
+        if (playerRigidbody.velocity.magnitude > maxSpeed)
+        {
+            float exceededVel = playerRigidbody.velocity.magnitude - maxSpeed;
+            Vector2 counterVector = -(new Vector2(playerRigidbody.velocity.x, playerRigidbody.velocity.y).normalized) * exceededVel;
+            playerRigidbody.velocity += counterVector;
         }
     }
 
@@ -52,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _acceleration = deceleation;
         }
-    
+
         m_engineForce = Mathf.MoveTowards(m_engineForce, m_targetEngineForce * maxEngineForce, _acceleration * Time.deltaTime);
     }
 
@@ -90,7 +97,8 @@ public class PlayerMovement : MonoBehaviour
         m_engineForce = 0f;
     }
 
-    public void OnCollideWithOil () {
+    public void OnCollideWithOil()
+    {
         m_engineForce = 0f;
     }
 }
