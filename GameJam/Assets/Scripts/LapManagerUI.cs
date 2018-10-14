@@ -11,7 +11,6 @@ public class LapManagerUI : MonoBehaviour {
 	public Text lapTimeText;
 	void Awake () {
 		m_lapManager = GetComponent<LapManager>();
-		lapTimeText = GameObject.FindGameObjectWithTag("Canvas").GetComponentInChildren<Text>();
 	}
 	
 	// Update is called once per frame
