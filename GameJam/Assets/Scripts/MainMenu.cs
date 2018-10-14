@@ -15,8 +15,11 @@ public class MainMenu : MonoBehaviour {
 	}
 
 	public void QuitGame(){
-		Debug.Log("Quit");
-		Application.Quit();
+		SceneManager.LoadScene("Credits");
+	}
+
+	public void Back(){
+		SceneManager.LoadScene("Menu");
 	}
 	
 }
