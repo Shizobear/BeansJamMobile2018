@@ -49,6 +49,8 @@ public class PlayerMovement : MonoBehaviour
             Vector2 counterVector = -(new Vector2(playerRigidbody.velocity.x, playerRigidbody.velocity.y).normalized) * exceededVel;
             playerRigidbody.velocity += counterVector;
         }
+
+        Debug.Log("Geschwindigkeit: " + playerRigidbody.velocity.magnitude);
     }
 
     void UpdateEngineForce()
